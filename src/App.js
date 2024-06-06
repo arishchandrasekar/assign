@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import {
   Routes,
   Route,
@@ -46,6 +48,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<SurfaceBook />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }

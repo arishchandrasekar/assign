@@ -1,8 +1,15 @@
 import FrameComponent3 from "../components/FrameComponent3";
 import FrameComponent1 from "../components/FrameComponent1";
 import FrameComponent from "../components/FrameComponent";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SurfaceBook = () => {
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
   return (
     <div className="w-full relative bg-whitesmoke box-border overflow-hidden flex flex-col items-center justify-start pt-[38px] px-5 pb-[134px] gap-[14px] leading-[normal] tracking-[normal] border-[1px] border-solid border-black">
       <main className="w-[1200px] flex flex-row flex-wrap items-start justify-start gap-[30px] max-w-full text-left text-[32px] text-black font-inter">
@@ -135,7 +142,12 @@ const SurfaceBook = () => {
                 alt=""
                 src="/logout-1@2x.png"
               />
-              <div className="relative inline-block min-w-[61px]">Log Out</div>
+              <div
+                onClick={handleLoginClick}
+                className="relative inline-block min-w-[61px] cursor-pointer"
+              >
+                Login
+              </div>
             </div>
           </div>
         </div>
