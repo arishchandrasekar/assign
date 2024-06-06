@@ -1,5 +1,6 @@
 # Dependencies
 /node_modules
+/src/firebaseconfig.js
 
 # Production
 /build
